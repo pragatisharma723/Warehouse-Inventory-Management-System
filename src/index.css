@@ -1,0 +1,195 @@
+/* index.css - global + sidebar + dashboard styles */
+:root{
+  --bg-1: #071022;
+  --bg-2: #0f172a;
+  --glass: rgba(255,255,255,0.04);
+  --muted: #9fb4d8;
+  --accent1: #60a5fa;
+  --accent2: #38bdf8;
+  --card-bg: rgba(255,255,255,0.03);
+}
+
+/* Page background */
+html,body,#root {
+  height:100%;
+  margin:0;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #041225 0%, #071128 45%, #0b1220 100%);
+  color: #e6eef8;
+}
+
+/* App layout */
+.app-shell {
+  display:flex;
+  min-height:100vh;
+}
+
+/* ===========================
+   MINI SIDEBAR (icons-only)
+   - collapsed width: 72px
+   - expands to 220px on hover
+   =========================== */
+.sidebar {
+  width:72px;
+  transition: width 220ms ease;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-right: 1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:12px 8px;
+  gap:8px;
+}
+.sidebar:hover { width:220px; }
+
+/* sidebar content aligns when expanded */
+.sidebar .brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:100%;
+  padding:8px;
+}
+.sidebar .brand .logo {
+  width:44px; height:44px; border-radius:8px;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  display:flex; align-items:center; justify-content:center; color:#041225; font-weight:700;
+}
+
+/* nav items */
+.sidebar .nav {
+  margin-top:16px;
+  width:100%;
+}
+.nav-item {
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px;
+  border-radius:10px;
+  color:var(--muted);
+  cursor:pointer;
+  transition: background 180ms ease, color 180ms ease, transform 120ms ease;
+}
+.nav-item:hover {
+  background: linear-gradient(90deg, rgba(96,165,250,0.12), rgba(56,189,248,0.06));
+  color:#fff;
+  transform: translateX(4px);
+}
+/* icon box */
+.icon-box {
+  width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+  background: rgba(255,255,255,0.02); color:var(--accent1);
+}
+
+/* label visible only when expanded */
+.sidebar .label {
+  opacity:0;
+  transition: opacity 160ms ease;
+  white-space:nowrap;
+  font-weight:600;
+}
+.sidebar:hover .label { opacity:1; }
+
+/* bottom footer in sidebar */
+.sidebar .foot {
+  margin-top:auto;
+  width:100%;
+  padding:8px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* main content area */
+.main {
+  flex:1;
+  padding:20px;
+}
+
+/* top navbar */
+.topbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+}
+.topbar .title {
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.topbar .title h1 { margin:0; font-size:18px; color:#fff; }
+.topbar .controls { display:flex; gap:10px; align-items:center; }
+
+/* Stats row + cards */
+.stats-row { display:flex; gap:12px; margin-bottom:18px; flex-wrap:wrap; }
+.stat {
+  flex:1 1 170px;
+  padding:14px;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+}
+.stat h6 { margin:0; color:var(--muted); font-size:13px; }
+.stat h3 { margin-top:6px; margin-bottom:0; color:#fff; font-size:22px; }
+
+/* card */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.5);
+}
+
+/* tables responsive */
+.table-responsive { overflow-x:auto; margin-top:8px; }
+
+/* general controls */
+.btn-ghost { background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.03); }
+.small-muted { color:var(--muted); font-size:13px; }
+
+/* charts container tweaks */
+.chart-wrap { height:320px; }
+
+/* responsive adjustments */
+@media (max-width:900px){
+  .sidebar { display:none; }
+  .main { padding:12px; }
+}
+
+/* Dark table theme */
+.table {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #d9e6ff !important;
+}
+
+.table thead {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+.table tbody tr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.table td, .table th {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.recharts-legend-item-text {
+  color: #cfe3ff !important;
+}
+
+.recharts-default-tooltip {
+  font-size: 13px;
+}
+
+
