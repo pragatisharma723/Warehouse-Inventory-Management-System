@@ -128,7 +128,6 @@ node index.js
 cd frontend
 npm install
 npm start
-
 - Backend runs on: `http://localhost:5000`
 - Frontend runs on: `http://localhost:3000`
 
@@ -152,7 +151,8 @@ npm start
 
 ---
 
+
 ## 👩‍💻 Author
 
-**Pragati Sharma**  
+**[Pragati Sharma](https://github.com/pragatisharma723)**  
 UI/UX Enthusiast | Backend Developer | Web Development Learner
