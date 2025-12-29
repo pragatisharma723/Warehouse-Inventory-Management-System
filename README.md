@@ -112,27 +112,6 @@ The backend ensures **data consistency across product, batch, and inventory tabl
 - Alerts linked to product ID
 
 ---
-
-## 🚀 How to Run Locally
-
-```bash
-# Clone repository
-git clone https://github.com/your-username/warehouse-inventory-management.git
-
-# Backend setup
-cd backend
-npm install
-node index.js
-
-# Frontend setup
-cd frontend
-npm install
-npm start
-- Backend runs on: `http://localhost:5000`
-- Frontend runs on: `http://localhost:3000`
-
----
-
 ## 📌 Key Highlights
 - Automatic batch & inventory creation
 - SQL joins for accurate inventory tracking
@@ -150,9 +129,30 @@ npm start
 - Barcode / QR-based inventory tracking
 
 ---
+## 🚀 How to Run Locally
+
+```bash
+# Clone repository
+git clone https://github.com/pragatisharma723/warehouse-inventory-management.git
+
+# Backend setup
+cd backend
+npm install
+node index.js
+
+# Frontend setup
+cd frontend
+npm install
+npm start
+
+- Backend runs on: `http://localhost:5000`
+- Frontend runs on: `http://localhost:3000`
 
 
-## 👩‍💻 Author
 
-**[Pragati Sharma](https://github.com/pragatisharma723)**  
-UI/UX Enthusiast | Backend Developer | Web Development Learner
+
+
+
+
+
+
